@@ -1,16 +1,16 @@
 import React from 'react'
 import { View, Image, Text, Button, ImageBackground, StyleSheet } from 'react-native'
 
-import imgBackground from './assets/BackGroundIndex.png'
+import imgBackground from '../assets/BackGroundIndex.png'
 const IndexPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <ImageBackground source={imgBackground} style={styles.image}>
                 <View style={styles.button}>
-                    <Button  title="Registro"></Button>
+                    <Button onPress={()=>navigation.push('Register')} title="Registro"></Button>
                 </View>
                 <View style={styles.button}>
-                    <Button onPress={()=>navigation.push('Modules')} title="Iniciar sesion"></Button>
+                    <Button onPress={()=>navigation.push('Login')} title="Iniciar sesion"></Button>
                 </View>
             </ImageBackground>
         </View>

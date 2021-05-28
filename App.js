@@ -7,8 +7,11 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { View, Image, Text } from 'react-native'
 
 //Views
-import Modules from './Modules'
-import IndexPage from './IndexPage'
+import Modules from './views/Modules'
+import IndexPage from './views/IndexPage'
+import Login from './views/Login'
+import Register from './views/Register'
+
 const Stack = createStackNavigator();
 
 const Details = () => {
@@ -23,7 +26,8 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Inicio" component={IndexPage} options={{ headerTitleStyle: { alignSelf: 'center' } }} />
         <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos", headerTitleStyle: { position: 'relative', left: 100 } }} />
-        <Stack.Screen name="actividades-mentales" component={Details} />
+        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion", headerTitleStyle: { position: 'relative', left: 80 } }}/>
+        <Stack.Screen name="Register" component={Register} options={{ title: "Registro", headerTitleStyle: { position: 'relative', left: 80 } }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
