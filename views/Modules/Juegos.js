@@ -25,7 +25,7 @@ const Juegos = ({ navigation }) => {
                 <View>
 
                 </View>
-                <TouchableWithoutFeedback style={styles.button} >
+                <TouchableWithoutFeedback style={styles.button} onPress={() => navigation.navigate('ViewJuegos')}>
                     <Text style={styles.text}>CONTINUAR</Text>
                     <View style={{ justifyContent: 'center', width: 20, height: '100%', flex: 0.2 }}>
                         <Image style={{ width: 30, height: 30 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/271/271226.png' }}></Image>
