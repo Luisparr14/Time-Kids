@@ -21,6 +21,8 @@ import Recomendaciones from './views/Modules/Recomendaciones';
 import ModuleActividadesMentales from './views/ModulesContent/ModuleActividadesMentales';
 import ModuleJuegos from './views/ModulesContent/ModuleJuegos';
 import ModuleVideos from './views/ModulesContent/ModuleVideos';
+import ModuleEjercicios from './views/ModulesContent/ModuleEjercicios';
+import ModuleActividadesConPadres from './views/ModulesContent/ModuleActividadesConPadres';
 
 const Stack = createStackNavigator();
 
@@ -32,32 +34,36 @@ const Details = () => {
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
+    <NavigationContainer >
+      <Stack.Navigator screenOptions={{
+        headerLeft:false
+      }}>
+
         {/*Login/Register*/}
         <Stack.Screen name="Inicio" component={IndexPage} options={{ headerTitleStyle: { alignSelf: 'center' } }} />
-        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion"}}/>
-        
+        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion" }} />
+
 
         {/*Modules*/}
-        <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos"}} />
+        <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos" }} />
 
         {/*Views of modules*/}
-        <Stack.Screen name="AM" component={ActividadesMentales} options={{ title: "Actividades Mentales", headerTitleStyle: { position: 'relative', left: 40 } }} />
-        <Stack.Screen name="Juegos" component={Juegos} options={{ title: "Juegos"}} />
-        <Stack.Screen name="Videos" component={Videos} options={{ title: "Videos"}} />
-        <Stack.Screen name="EAAL" component={EjercicioAlAireLibre} options={{ title: "Ejercicios al aire libre"}} /> 
-        <Stack.Screen name="ACP" component={ActividadesConPadres} options={{ title: "Actividades con los padres"}} />
-        <Stack.Screen name="Recomendaciones" component={Recomendaciones} options={{ title: "Recomendaciones"}} />
+        <Stack.Screen name="AM" component={ActividadesMentales} options={{ title: "Actividades Mentales", headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="Juegos" component={Juegos} options={{ title: "Juegos" }} />
+        <Stack.Screen name="Videos" component={Videos} options={{ title: "Videos" }} />
+        <Stack.Screen name="EAAL" component={EjercicioAlAireLibre} options={{ title: "Ejercicios al aire libre" }} />
+        <Stack.Screen name="ACP" component={ActividadesConPadres} options={{ title: "Actividades con los padres" }} />
+        <Stack.Screen name="Recomendaciones" component={Recomendaciones} options={{ title: "Recomendaciones" }} />
 
         {/* ActividadesMentales-Vista */}
-        <Stack.Screen name="ViewAM" component={ModuleActividadesMentales} options={{ title: "Actividades Mentales"}} />
-        <Stack.Screen name="ViewJuegos" component={ModuleJuegos} options={{ title: "Juegos"}} />
-        <Stack.Screen name="ViewVideos" component={ModuleVideos} options={{ title: "Videos"}} />
-
+        <Stack.Screen name="ViewAM" component={ModuleActividadesMentales} options={{ title: "Actividades Mentales" }} />
+        <Stack.Screen name="ViewJuegos" component={ModuleJuegos} options={{ title: "Juegos" }} />
+        <Stack.Screen name="ViewVideos" component={ModuleVideos} options={{ title: "Videos" }} />
+        <Stack.Screen name="ViewEjercicios" component={ModuleEjercicios} options={{ title: "Ejercicios al aire libre" }} />
+        <Stack.Screen name="ViewACP" component={ModuleActividadesConPadres} options={{ title: "Actividad con Padres" }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
+//onPress={()=>Linking.openURL('')}
 export default App

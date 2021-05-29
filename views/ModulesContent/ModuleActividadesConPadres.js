@@ -1,46 +1,55 @@
-import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import React from 'react';
+import { View, Image, Text, ScrollView, StyleSheet,Linking } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 // Iconos
 
-const ModuleJuegos = ({ navigation }) => {
+const ModuleActividadesConPadres = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ffe16c' }]} onPress={()=>Linking.openURL('https://apps.apple.com/co/app/id1435796728?mt=8')}>
+
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={()=>Linking.openURL('')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Dibujar y colorear</Text>
+            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >La colmena</Text>
           </View>
         </TouchableOpacity>
-
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={()=>Linking.openURL()}>
+        
+          {/*Es una app IOS */}
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={()=>Linking.openURL('')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Barquito chiquitoto</Text>
+            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >El castillo de cuento de hadas</Text>
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={()=>Linking.openURL()}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL('')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Toc and roll</Text>
+            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Portalápices</Text>
           </View>
         </TouchableOpacity>
-
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL('')}>
+          <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
+            <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Pulseras y brazalete</Text>
+          </View>
+        </TouchableOpacity>
         <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL()}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Aprende a leer y escribir</Text>
+            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >La gallina porta huevos</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL()}>
@@ -48,7 +57,7 @@ const ModuleJuegos = ({ navigation }) => {
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Fun english</Text>
+            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Insectos, arañas y ciempiés</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -69,4 +78,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ModuleJuegos
+export default ModuleActividadesConPadres
