@@ -16,8 +16,8 @@ const LoginPage = ({navigation}) => {
     const login=()=>{
         console.log(edad);
         
-        // edad.value==''?alert('ingrese una edad'):edad.value<18?alert('Debe ser mayor de edad'):navigation.navigate('Modules')
-        navigation.navigate('Modules')
+        edad.value<18?alert('Debe ser mayor de edad'):navigation.navigate('Modules')
+        edad.value==''?alert('ingrese una edad'):''
         
     }
 
@@ -32,6 +32,11 @@ const LoginPage = ({navigation}) => {
                     <TouchableOpacity>
                         <Text style={{ fontSize: 30, color: '#03d3fc' }}>Login</Text>
                     </TouchableOpacity>                    
+                </View>
+                <View style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Register')}>
+                        <Text style={{ fontSize: 30 }}>Registro</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
 

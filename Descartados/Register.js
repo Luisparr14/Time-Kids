@@ -1,24 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 
-const LoginPage = ({navigation}) => {
+const LoginPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.containertText}>
                 <Text style={styles.text}>  Time Kids</Text>
             </View>
+
             <View style={styles.containerButtonTop}>
                 <View style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-                    <TouchableWithoutFeedback onPress={()=>navigation.push('Login')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                         <Text style={{ fontSize: 30 }}>Login</Text>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 </View>
                 <View style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-                    <TouchableWithoutFeedback>
+                    <TouchableOpacity>
                         <Text style={{ fontSize: 30, color: '#03d3fc' }}>Registro</Text>
-                    </TouchableWithoutFeedback>
+
+                    </TouchableOpacity>
                 </View>
             </View>
+
             <View style={styles.containerInput}>
                 <TextInput
                     style={styles.input}
@@ -45,9 +48,9 @@ const LoginPage = ({navigation}) => {
             </View>
             <View style={styles.containerLogin}>
                 <View style={styles.containerButtonLogIn}>
-                    <TouchableWithoutFeedback style={styles.button}>
+                    <TouchableOpacity style={styles.button}>
                         <Text style={{ fontSize: 29, textAlign: 'center', textAlignVertical: 'center', height: 50 }}>Registrarse</Text>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 </View>
             </View>
 
@@ -57,18 +60,18 @@ const LoginPage = ({navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 2
+        flex: 1
     },
     text: {
         padding: 35,
         fontSize: 60,
     },
-    containertText: {    
+    containertText: {
         alignItems: 'center',
     },
     containerButtonTop: {
         flexDirection: 'row',
-        marginBottom:30,
+        marginBottom: 30,
     },
     containerInput: {
         display: 'flex',

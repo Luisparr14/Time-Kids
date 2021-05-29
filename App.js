@@ -10,7 +10,11 @@ import { View, Image, Text } from 'react-native'
 import Modules from './views/Modules'
 import IndexPage from './views/IndexPage'
 import Login from './views/Login'
-import Register from './views/Register'
+import ActividadesMentales from './views/Modules/ActividadesMentales';
+import Videos from './views/Modules/Videos';
+import EjercicioAlAireLibre from './views/Modules/EjercicioAlAireLibre';
+import ActividadesConPadres from './views/Modules/ActividadesConPadres';
+import Recomendaciones from './views/Modules/Recomendaciones';
 
 const Stack = createStackNavigator();
 
@@ -24,10 +28,21 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        {/*Login/Register*/}
         <Stack.Screen name="Inicio" component={IndexPage} options={{ headerTitleStyle: { alignSelf: 'center' } }} />
-        <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos", headerTitleStyle: { position: 'relative', left: 100 } }} />
-        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion", headerTitleStyle: { position: 'relative', left: 80 } }}/>
-        <Stack.Screen name="Register" component={Register} options={{ title: "Registro", headerTitleStyle: { position: 'relative', left: 80 } }}/>
+        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion"}}/>
+        
+
+        {/*Modules*/}
+        <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos"}} />
+
+        {/*Views of modules*/}
+        <Stack.Screen name="AM" component={ActividadesMentales} options={{ title: "Actividades Mentales", headerTitleStyle: { position: 'relative', left: 40 } }} />
+        <Stack.Screen name="Juegos" component={ActividadesMentales} options={{ title: "Juegos"}} />
+        <Stack.Screen name="Videos" component={Videos} options={{ title: "Juegos"}} />
+        <Stack.Screen name="EAAL" component={EjercicioAlAireLibre} options={{ title: "Ejercicios al aire libre"}} /> 
+        <Stack.Screen name="ACP" component={ActividadesConPadres} options={{ title: "Actividades con los padres"}} />
+        <Stack.Screen name="Recomendaciones" component={Recomendaciones} options={{ title: "Recomendaciones"}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

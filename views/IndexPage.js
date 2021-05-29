@@ -1,17 +1,24 @@
 import React from 'react'
-import { View, Image, Text, Button, ImageBackground, StyleSheet } from 'react-native'
+import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native'
 
 import imgBackground from '../assets/BackGroundIndex.png'
 const IndexPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <ImageBackground source={imgBackground} style={styles.image}>
-                <View style={styles.button}>
-                    <Button onPress={()=>navigation.push('Register')} title="Registro"></Button>
+
+                {/* <View style={styles.containerButton}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.button}>
+                        <Text style={styles.text}>REGISTRO</Text>
+                    </TouchableOpacity>
+                </View> */}
+
+                <View style={styles.containerButton}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.button}>
+                        <Text style={styles.text}>INICIAR SESIÓN</Text>
+                    </TouchableOpacity>
                 </View>
-                <View style={styles.button}>
-                    <Button onPress={()=>navigation.push('Login')} title="Iniciar sesion"></Button>
-                </View>
+
             </ImageBackground>
         </View>
     )
@@ -21,31 +28,39 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column",
-        backgroundColor: 'red',
+        backgroundColor: '#000',
 
     },
     image: {
         height: 'auto',
         flex: 1,
         resizeMode: "cover",
-        justifyContent: "center",
-        borderColor: 'black'
-
+        justifyContent: "flex-end",
+        alignItems: 'center'
     },
     text: {
         color: "white",
-        fontSize: 42,
+        fontSize: 30,
         fontWeight: "bold",
         textAlign: "center",
-        backgroundColor: "#000000a0"
+        height: 60,
+        textAlignVertical: 'center'
     },
 
-    button: {
+    containerButton: {
         position: 'relative',
-        top: 200,
-        left: 150,
+        bottom: 90,
+        display: 'flex',
+        alignItems: 'center',
+        alignContent: 'flex-end',
         marginBottom: 20,
-        width: 120
+        backgroundColor: '#8c8c8c',
+        height: 55,
+        width: '55%',
+        borderRadius: 16
+    },
+    button: {
+        width: '100%',
     }
 });
 
