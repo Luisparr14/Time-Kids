@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, ScrollView, Linking } from 'react-native'
+
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
 
@@ -12,27 +12,28 @@ const ModuleActividadesMentales = ({ navigation }) => {
           title="Juego de Ordenar"
           background="#ffe16c"
           textSize={40}
-          onPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-memoria-infantiles/juegos-de-ordenar')}
+          
+          handleOnPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-memoria-infantiles/juegos-de-ordenar')}
         />
 
         <ModuleComponentWithOutImg
           title="Juego de puzzles"
-          background="#06cdb4"
+          background="#ffe16c"
           textSize={40}
-          onPress={() => Linking.openURL('https://apps.apple.com/es/app/shape-builder-preschool-learning/id306572986?ign-mpt=uo%3D6')}
+          handleOnPress={() => Linking.openURL('https://apps.apple.com/es/app/shape-builder-preschool-learning/id306572986?ign-mpt=uo%3D6')}
         />
         <ModuleComponentWithOutImg
           title="Juego de memoria"
-          background="#c8e265"
+          background="#ffe16c"
           textSize={40}
-          onPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-memoria-infantiles/primaria-donde-estan')}
+          handleOnPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-memoria-infantiles/primaria-donde-estan')}
         />
 
         <ModuleComponentWithOutImg
           title="Juego de vocabulario"
-          background="#ff914d"
+          background="#ffe16c"
           textSize={38}
-          onPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-letras/juegos-de-vocabulario')}
+          handleOnPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-letras/juegos-de-vocabulario')}
         />
 
       </View>
@@ -41,16 +42,5 @@ const ModuleActividadesMentales = ({ navigation }) => {
   )
 }
 
-const styles = StyleSheet.create({
-  containerModule: {
-    height: 150,
-    width: 350,
-    marginBottom: 35,
-    borderRadius: 20,
-    flexDirection: 'row',
-    marginTop: 20,
-    marginBottom: 20
-  }
-})
 
 export default ModuleActividadesMentales

@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, ScrollView, Linking } from 'react-native'
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 
 // Iconos
@@ -12,20 +11,20 @@ const ModuleEjercicios = ({ navigation }) => {
 
         <ModuleComponentWithOutImg
           title="Carrera con sacos/costales"
-          background="#ffe16c"
+          background="#ff914d"
           handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=gxNgnGiRupo&feature=emb_logo')}
         />
 
         <ModuleComponentWithOutImg
           title="Carreras de tres piernas"
-          background="#06cdb4"
+          background="#ff914d"
           handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=DOTy0MI7Zxo')}
         />
 
         {/*Es una app IOS */}
         <ModuleComponentWithOutImg
           title="Juego de tirar a la cuerda"
-          background="#c8e265"
+          background="#ff914d"
           handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=moHHLQGGGxw&feature=emb_imp_woyt')}
         />
 

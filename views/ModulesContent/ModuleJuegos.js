@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { View, ScrollView, Linking } from 'react-native'
 
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
@@ -12,7 +11,7 @@ const ModuleJuegos = ({ navigation }) => {
 
         <ModuleComponentWithOutImg
           title="Dibujar y colorear"
-          background="#ffe16c"
+          background="#06cdb4"
           textSize={40}
           handleOnPress={() => Linking.openURL('https://apps.apple.com/co/app/id1435796728?mt=8')}
         />
@@ -26,20 +25,20 @@ const ModuleJuegos = ({ navigation }) => {
         />
         <ModuleComponentWithOutImg
           title="Toc and roll"
-          background="#c8e265"
+          background="#06cdb4"
           textSize={40}
           handleOnPress={() => Linking.openURL()}
         />
 
           <ModuleComponentWithOutImg
           title="Aprende a leer y escribir"
-          background="#ff914d"
+          background="#06cdb4"
           textSize={40}
           handleOnPress={() => Linking.openURL()}
         />
          <ModuleComponentWithOutImg
           title="Fun english"
-          background="#ff914d"
+          background="#06cdb4"
           textSize={40}
           handleOnPress={() => Linking.openURL()}
         />

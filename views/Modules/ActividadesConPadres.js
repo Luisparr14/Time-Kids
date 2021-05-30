@@ -1,15 +1,14 @@
 import React from 'react'
-import { ScrollView, View, Text, Image } from 'react-native'
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
+import { ScrollView, View, Text } from 'react-native'
+import { ButtonNext, ButtonBack } from '../../Components/ButtonsBack-Next-Text'
 import styles from './Styles/ModulesStyles'
 
 const ActividadesConPadres = ({ navigation }) => {
 
     return (
         <ScrollView>
-            <Text style={{fontSize:30, textAlign:'center', width:'100%', marginTop:20}}> Actividades con los padres</Text>
+            <Text style={{ fontSize: 30, textAlign: 'center', width: '100%', marginTop: 20 }}> Actividades con los padres</Text>
             <Text style={[styles.textInfo, { height: 1230 }]}>
-                
                 Jugar con niños tiene beneficios tanto para los padres como para los hijos. El aprendizaje durante el
                 juego con niños es mutuo. Los padres aprenden más cosas sobre sus hijos mientras que estos aprenden
                 los valores que se generan durante el juego como compartir. Además, los más pequeños ganarán en
@@ -38,19 +37,13 @@ const ActividadesConPadres = ({ navigation }) => {
 
             <View style={[styles.buttonContainer, { marginBottom: 60 }]}>
 
-                <TouchableWithoutFeedback style={styles.button} onPress={()=>navigation.navigate('ViewACP')}>
-                    <Text style={styles.text}>CONTINUAR</Text>
-                    <View style={{ justifyContent: 'center', width: 20, height: '100%', flex: 0.2 }}>
-                        <Image style={{ width: 30, height: 30 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/271/271226.png' }}></Image>
-                    </View>
-                </TouchableWithoutFeedback>
-
-                <TouchableWithoutFeedback style={styles.button} onPress={() => navigation.goBack()}>
-                    <View style={{ justifyContent: 'center', width: 20, height: '100%', flex: 0.08 }}>
-                        <Image style={{ width: 30, height: 30, position: 'relative', left: 10 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/709/709624.png' }}></Image>
-                    </View>
-                    <Text style={styles.text}>VOLVER</Text>
-                </TouchableWithoutFeedback>
+                <ButtonNext
+                    rute="ViewACP"
+                    navigation={navigation}
+                />
+                <ButtonBack
+                    navigation={navigation}
+                />
             </View>
         </ScrollView>
     )

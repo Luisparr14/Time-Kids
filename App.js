@@ -4,12 +4,13 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { View, Image, Text } from 'react-native'
+import { Text } from 'react-native'
 
 //Views
-import Modules from './views/Modules'
+import Modules from './views/ModuleContainer/Modules'
 import IndexPage from './views/IndexPage'
 import Login from './views/Login'
+
 import ActividadesMentales from './views/Modules/ActividadesMentales';
 import Juegos from './views/Modules/Juegos';
 import Videos from './views/Modules/Videos';

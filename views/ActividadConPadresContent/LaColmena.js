@@ -1,6 +1,5 @@
 import React from 'react'
-import { ScrollView, View, Text, Image } from 'react-native'
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
+import { ScrollView} from 'react-native'
 import ComponentACP from '../../Components/ComponentACP'
 import ImgLaColmena from '../../assets/ImgACPContent/LaColmena.jpg'
 const LaColmena = ({ navigation }) => {

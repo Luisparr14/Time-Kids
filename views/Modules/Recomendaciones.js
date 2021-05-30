@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet,Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View,ScrollView} from 'react-native'
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 
 // Iconos

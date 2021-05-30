@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, ScrollView, Linking } from 'react-native'
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
 
@@ -12,38 +11,38 @@ const ModuleActividadesConPadres = ({ navigation }) => {
 
         <ModuleComponentWithOutImg
           title="La colmena"
-          background="#06cdb4"
+          background="#f16f6e"
           handleOnPress={() => navigation.navigate('LaColmena')}
         />
 
         {/*Es una app IOS */}
         <ModuleComponentWithOutImg
           title="El castillo de cuento de hadas"
-          background="#c8e265"
+          background="#f16f6e"
           handleOnPress={() => navigation.navigate('CCH')}
         />
 
         <ModuleComponentWithOutImg
           title="Portalápices"
-          background="#ff914d"
+          background="#f16f6e"
           handleOnPress={() => navigation.navigate('PortaLapices')}
         />
 
         <ModuleComponentWithOutImg
           title="Pulseras y brazalete"
-          background="#ff914d"
+          background="#f16f6e"
           handleOnPress={() => navigation.navigate('Pulseras')}
         />
 
         <ModuleComponentWithOutImg
           title="La gallina porta huevos"
-          background="#ff914d"
+          background="#f16f6e"
           handleOnPress={() => navigation.navigate('Gallina')}
         />
 
         <ModuleComponentWithOutImg
           title="Insectos, arañas y ciempiés"
-          background="#ff914d"
+          background="#f16f6e"
           handleOnPress={() => navigation.navigate('Insectos')}
         />
       </View>
@@ -51,17 +50,5 @@ const ModuleActividadesConPadres = ({ navigation }) => {
 
   )
 }
-
-const styles = StyleSheet.create({
-  containerModule: {
-    height: 150,
-    width: 350,
-    marginBottom: 35,
-    borderRadius: 20,
-    flexDirection: 'row',
-    marginTop: 20,
-    marginBottom: 20
-  }
-})
 
 export default ModuleActividadesConPadres

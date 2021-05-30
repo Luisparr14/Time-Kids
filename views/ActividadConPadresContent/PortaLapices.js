@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, View, Text, Image } from 'react-native'
+import { ScrollView} from 'react-native'
 import ComponentACP from '../../Components/ComponentACP'
 import ImgPortalapiz from '../../assets/ImgACPContent/portalapiz.jpg'
 

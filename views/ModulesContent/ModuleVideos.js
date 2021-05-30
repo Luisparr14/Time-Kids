@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, ScrollView, Linking } from 'react-native'
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
 
@@ -12,14 +11,14 @@ const ModuleVideos = ({ navigation, props }) => {
 
                 <ModuleComponentWithOutImg
                     title="Aprende las colores, vocales, números y frútas"
-                    background="#ffe16c"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=zLUcGwJ2t0U')}
                 />
 
                 <ModuleComponentWithOutImg
                     title="Cuentos infantiles para niños"
-                    background="#06cdb4"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=9xMWgEZEEow')}
                 />
@@ -33,28 +32,28 @@ const ModuleVideos = ({ navigation, props }) => {
 
                 <ModuleComponentWithOutImg
                     title="Colorear los planetas"
-                    background="#ff914d"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=lo9T9zjOXOQ')}
                 />
 
                 <ModuleComponentWithOutImg
                     title="Mezclar los colores"
-                    background="#ff914d"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=GWS14nnIMXs')}
                 />
 
                 <ModuleComponentWithOutImg
                     title="Cómo hacer cerditos con material reciclado"
-                    background="#ffe16c"
+                    background="#c8e265"
                     textSize={34}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=IP6EvXo42ag')}
                 />
 
                 <ModuleComponentWithOutImg
                     title="Cómo hacer un robot con material reciclado"
-                    background="#06cdb4"
+                    background="#c8e265"
                     textSize={35}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=BeOJKnXwah4')}
                 />
@@ -75,7 +74,7 @@ const ModuleVideos = ({ navigation, props }) => {
 
                 <ModuleComponentWithOutImg
                     title="El sistema circulatorio"
-                    background="#ff914d"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=ZzATGDMNKYw')}
                 />
@@ -89,14 +88,14 @@ const ModuleVideos = ({ navigation, props }) => {
 
                 <ModuleComponentWithOutImg
                     title="La cadena alimenticia"
-                    background="#ff914d"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=LtDpx5HCG_Y')}
                 />
 
                 <ModuleComponentWithOutImg
                     title="Animales Herbívoros, Carnívoros y Omnívoros"
-                    background="#ff914d"
+                    background="#c8e265"
                     textSize={40}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=fOYM6mZjIrc')}
                 />
