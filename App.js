@@ -24,6 +24,14 @@ import ModuleVideos from './views/ModulesContent/ModuleVideos';
 import ModuleEjercicios from './views/ModulesContent/ModuleEjercicios';
 import ModuleActividadesConPadres from './views/ModulesContent/ModuleActividadesConPadres';
 
+// contenido ACP
+import LaColmena from './views/ActividadConPadresContent/LaColmena';
+import CastilloDelCuentoDeHadas from './views/ActividadConPadresContent/CastilloDelCuentoDeHadas';
+import PortaLapices from './views/ActividadConPadresContent/PortaLapices';
+import PulserasYBrazaletes from './views/ActividadConPadresContent/PulserasYBrazaletes';
+import LaGallinaPortaHuevos from './views/ActividadConPadresContent/LaGallinaPortaHuevos';
+import InsectoAraña from './views/ActividadConPadresContent/InsectoAraña';
+
 const Stack = createStackNavigator();
 
 const Details = () => {
@@ -61,6 +69,14 @@ const App = () => {
         <Stack.Screen name="ViewVideos" component={ModuleVideos} options={{ title: "Videos" }} />
         <Stack.Screen name="ViewEjercicios" component={ModuleEjercicios} options={{ title: "Ejercicios al aire libre" }} />
         <Stack.Screen name="ViewACP" component={ModuleActividadesConPadres} options={{ title: "Actividad con Padres" }} />
+
+        {/* Contenido de actividad con padres */}
+        <Stack.Screen name="LaColmena" component={LaColmena} options={{ title: "La Colmena" }} />
+        <Stack.Screen name="CCH" component={CastilloDelCuentoDeHadas} options={{ title: "El Castillo del cuento de hadas" }} />
+        <Stack.Screen name="PortaLapices" component={PortaLapices} options={{ title: "Portalapices" }} />
+        <Stack.Screen name="Pulseras" component={PulserasYBrazaletes} options={{ title: "Pulseras y brazalete" }} />
+        <Stack.Screen name="Gallina" component={LaGallinaPortaHuevos} options={{ title: "La gallina porta huevos" }} />
+        <Stack.Screen name="Insectos" component={InsectoAraña} options={{ title: "Insectos, arañas y ciempiés" }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

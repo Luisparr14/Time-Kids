@@ -9,7 +9,7 @@ const ModuleActividadesConPadres = ({ navigation }) => {
     <ScrollView>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={()=>Linking.openURL('')}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={()=>navigation.navigate('LaColmena')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
@@ -19,7 +19,7 @@ const ModuleActividadesConPadres = ({ navigation }) => {
         </TouchableOpacity>
         
           {/*Es una app IOS */}
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={()=>Linking.openURL('')}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={()=>navigation.navigate('CCH')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
@@ -28,7 +28,7 @@ const ModuleActividadesConPadres = ({ navigation }) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL('')}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>navigation.navigate('PortaLapices')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
@@ -36,7 +36,7 @@ const ModuleActividadesConPadres = ({ navigation }) => {
             <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Portalápices</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL('')}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>navigation.navigate('Pulseras')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
@@ -44,7 +44,7 @@ const ModuleActividadesConPadres = ({ navigation }) => {
             <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Pulseras y brazalete</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL()}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>navigation.navigate('Gallina')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
@@ -52,7 +52,7 @@ const ModuleActividadesConPadres = ({ navigation }) => {
             <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >La gallina porta huevos</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL()}>
+        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>navigation.navigate('Insectos')}>
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
             <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
           </View>
