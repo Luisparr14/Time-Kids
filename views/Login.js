@@ -1,24 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Alert } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const LoginPage = ({navigation}) => {
 
-    const [nombre, setNombre]=useState([])
-    const [edad,setEdad]=useState({['value']:''})
+    const [nombre, setNombre]=useState({['nombre']:''})
+    const [edad,setEdad]=useState({['edad']:''})
     
     const handleChange=value=>{
-        setNombre({value})
-        setEdad({value})
+        setNombre({['nombre']:value})
+        setEdad({['edad']:value.edad})
     }
 
     const login=()=>{
-        console.log(edad);
-        
-        // edad.value==''?alert('ingrese una edad'):edad.value<18?alert('Debe ser mayor de edad'):navigation.navigate('Modules')
-        navigation.navigate('Modules')
-        
+        console.log(nombre.nombre);
+        console.log(edad.edad);
+        edad.edad==''||nombre.nombre==''?Alert.alert('Llege todos los campos',"Por favor llene los campos"):edad.edad<18?Alert.alert('Debe ser mayor de edad',"Debe tener más de 18 años para acceder a la app"):navigation.navigate('Modules')
     }
 
     return (
@@ -40,7 +38,7 @@ const LoginPage = ({navigation}) => {
                     style={styles.input}
                     placeholder="Nombre"
                     name='Nombre'
-                    onChangeText={handleChange}
+                    onChangeText={(value)=>setNombre({['nombre']:value})}
 
                 />
             </View>
@@ -49,7 +47,7 @@ const LoginPage = ({navigation}) => {
                     style={styles.input}
                     placeholder="Edad"
                     name='edad'
-                    onChangeText={handleChange}
+                    onChangeText={(value)=>setEdad({['edad']:value})}
                 />
             </View>
             <View style={styles.containerLogin}>

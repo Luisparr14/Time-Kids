@@ -1,107 +1,119 @@
 import React from 'react';
 import { View, ScrollView, Linking } from 'react-native'
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
-// Iconos
+import VideoButton from '../../Components/VideoButton';
+import Vocales from '../../assets/imgYoutubeMiniature/Vocales.jpg'
+import Cuentos from '../../assets/imgYoutubeMiniature/Cuentos.jpg'
+import DibujarNumeros from '../../assets/imgYoutubeMiniature/DibujarNumeros.jpg'
+import Planetas from '../../assets/imgYoutubeMiniature/Planetas.jpg'
+import MeclarColores from '../../assets/imgYoutubeMiniature/MeclarColores.jpg'
+import Cerdito from '../../assets/imgYoutubeMiniature/Cerdito.jpg'
+import Robot from '../../assets/imgYoutubeMiniature/Robot.jpg'
+import Dormir from '../../assets/imgYoutubeMiniature/Dormir.jpg'
+import Profesiones from '../../assets/imgYoutubeMiniature/Profesiones.jpg'
+import SistemaCirculatorio from '../../assets/imgYoutubeMiniature/SistemaCirculatorio.jpg'
+import Sentidos from '../../assets/imgYoutubeMiniature/Sentidos.jpg'
+import CadenaAlimenticia from '../../assets/imgYoutubeMiniature/CadenaAlimenticia.jpg'
+import Animales from '../../assets/imgYoutubeMiniature/Animales.jpg'
+
 
 const ModuleVideos = ({ navigation, props }) => {
 
     return (
         <ScrollView>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
 
-                <ModuleComponentWithOutImg
-                    title="Aprende las colores, vocales, números y frútas"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Aprende las colores, vocales, números y frútas"
+                    imgBackground={Vocales}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=zLUcGwJ2t0U')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Cuentos infantiles para niños"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Cuentos infantiles para niños"
+                    imgBackground={Cuentos}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=9xMWgEZEEow')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Cómo Dibujar Los Números"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Cómo Dibujar Los Números"
+                    imgBackground={DibujarNumeros}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=DcDtWGu2b3A')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Colorear los planetas"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Colorear los planetas"
+                    imgBackground={Planetas}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=lo9T9zjOXOQ')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Mezclar los colores"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Mezclar los colores"
+                    imgBackground={MeclarColores}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=GWS14nnIMXs')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Cómo hacer cerditos con material reciclado"
-                    background="#c8e265"
-                    textSize={34}
+                <VideoButton
+                    videoTitle="Cómo hacer cerditos con material reciclado"
+                    imgBackground={Cerdito}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=IP6EvXo42ag')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Cómo hacer un robot con material reciclado"
-                    background="#c8e265"
-                    textSize={35}
+                <VideoButton
+                    videoTitle="Cómo hacer un robot con material reciclado"
+                    imgBackground={Robot}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=BeOJKnXwah4')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="A prepararse para dormir"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="A prepararse para dormir"
+                    imgBackground={Dormir}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=ISKf4g5gI7g')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Aprende las profesiones"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Aprende las profesiones"
+                    imgBackground={Profesiones}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=Qcz3ep7XWWI')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="El sistema circulatorio"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="El sistema circulatorio"
+                    imgBackground={SistemaCirculatorio}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=ZzATGDMNKYw')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Los sentidos"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Los sentidos"
+                    imgBackground={Sentidos}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=IhO5Je1Puyw')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="La cadena alimenticia"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="La cadena alimenticia"
+                    imgBackground={CadenaAlimenticia}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=LtDpx5HCG_Y')}
                 />
 
-                <ModuleComponentWithOutImg
-                    title="Animales Herbívoros, Carnívoros y Omnívoros"
-                    background="#c8e265"
-                    textSize={40}
+                <VideoButton
+                    videoTitle="Animales Herbívoros, Carnívoros y Omnívoros"
+                    imgBackground={Animales}
+                    navigation={navigation}
                     handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=fOYM6mZjIrc')}
+                    showButtonBack={true}
                 />
-
-
-
             </View>
         </ScrollView>
 

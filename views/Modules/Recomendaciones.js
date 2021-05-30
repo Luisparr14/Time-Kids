@@ -12,17 +12,20 @@ const ModuleEjercicios = ({ navigation }) => {
         title="Cronograma de actividades"
         textSize={30}
         background="#ffe16c"
+        handleOnPress={()=>navigation.navigate('Cronograma')}
         />
 
         <ModuleComponentWithOutImg 
         title="Tecnicas de Relajación"
         textSize={30}
+        handleOnPress={()=>navigation.navigate('TecnicasRelajacion')}
         />
         
         <ModuleComponentWithOutImg 
         title="Juguetes antiestrés"
         textSize={30}
         background="#ffe16c"
+        handleOnPress={()=>navigation.navigate('Juguete')}
         />
         
         <ModuleComponentWithOutImg 

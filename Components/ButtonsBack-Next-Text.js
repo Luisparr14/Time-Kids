@@ -4,10 +4,10 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 import styles from '../views/Modules/Styles/ModulesStyles'
 
-export function ButtonNext({ rute, navigation }) {
+export function ButtonNext({ rute, navigation,titleButton, ancho}) {
     return (
-        <TouchableWithoutFeedback style={styles.button} onPress={() => navigation.navigate(rute)} >
-            <Text style={styles.text}>CONTINUAR</Text>
+        <TouchableWithoutFeedback style={[styles.button, {width:ancho||200}]} onPress={() => navigation.navigate(rute)} >
+            <Text style={styles.text}>{titleButton||'CONTINUAR'}</Text>
             <View style={{ justifyContent: 'center', width: 20, height: '100%', flex: 0.2 }}>
                 <Image style={{ width: 30, height: 30 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/271/271226.png' }}></Image>
             </View>
