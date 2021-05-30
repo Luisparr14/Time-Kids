@@ -22,9 +22,7 @@ const Juegos = ({ navigation }) => {
                 </Text>
             </View>
             <View style={styles.buttonContainer}>
-                <View>
-
-                </View>
+    
                 <TouchableWithoutFeedback style={styles.button} onPress={() => navigation.navigate('ViewJuegos')}>
                     <Text style={styles.text}>CONTINUAR</Text>
                     <View style={{ justifyContent: 'center', width: 20, height: '100%', flex: 0.2 }}>

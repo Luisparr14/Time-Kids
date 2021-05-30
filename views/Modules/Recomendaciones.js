@@ -1,29 +1,41 @@
-import React from 'react'
-import { ScrollView, View, Text, StyleSheet, Image } from 'react-native'
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
-import styles from './Styles/ModulesStyles'
-const Recomendaciones = ({ navigation }) => {
+import React from 'react';
+import { View, Image, Text, ScrollView, StyleSheet,Linking } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 
-    return (
-        <ScrollView>
-            {/* <View style={[styles.buttonContainer, {marginTop:110}]}>
-                <TouchableWithoutFeedback style={styles.button} >
-                    <Text style={styles.text}>CONTINUAR</Text>
-                    <View style={{justifyContent:'center',width: 20,height: '100%',flex: 0.2}}>
-                        <Image style={{width:30, height:30}} source={{ uri: 'https://image.flaticon.com/icons/png/512/271/271226.png' }}></Image>
-                    </View>
-                </TouchableWithoutFeedback>
+// Iconos
 
-                <TouchableWithoutFeedback style={styles.button} onPress={() => navigation.goBack()}>
-                    <View style={{justifyContent:'center',width: 20,height: '100%',flex: 0.08}}>
-                            <Image style={{width:30, height:30, position:'relative', left:10}} source={{ uri: 'https://image.flaticon.com/icons/png/512/709/709624.png' }}></Image>
-                    </View>
-                    <Text style={styles.text}>VOLVER</Text>
-                </TouchableWithoutFeedback>
-            </View> */}
-        </ScrollView>
-    )
+const ModuleEjercicios = ({ navigation }) => {
+  return (
+    <ScrollView>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <ModuleComponentWithOutImg 
+        title="Cronograma de actividades"
+        textSize={30}
+        background="#ffe16c"
+        />
+
+        <ModuleComponentWithOutImg 
+        title="Tecnicas de Relajación"
+        textSize={30}
+        />
+        
+        <ModuleComponentWithOutImg 
+        title="Juguetes antiestrés"
+        textSize={30}
+        background="#ffe16c"
+        />
+        
+        <ModuleComponentWithOutImg 
+        title="Terapia psicológica"
+        textSize={30}
+        background="#ffe16c"
+        />
+      </View>
+    </ScrollView>
+
+  )
 }
 
 
-export default Recomendaciones
+export default ModuleEjercicios

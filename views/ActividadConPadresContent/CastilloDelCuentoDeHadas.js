@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
 import ComponentACP from '../../Components/ComponentACP'
-import ImgCDH from '../../assets/ImgACPContent/LaColmena.jpg'
+import ImgCastillo from '../../assets/ImgACPContent/castillo.jpg'
 const CastilloDelCuentoDeHadas = ({ navigation }) => {
     return (
         <ScrollView>
@@ -13,7 +13,7 @@ const CastilloDelCuentoDeHadas = ({ navigation }) => {
                 rollos de papel higiénico para variar las alturas. Como puedes ver, es una manualidad fácil y divertida
                 para niños de todas las edades. Los más pequeños pueden dibujar las puertas y ventanas como en la
                 imagen; los mayores pueden decorar con cartulina de colores y pegamento"
-                img={ImgCDH}
+                img={ImgCastillo}
                 alto={220}
             />
         </ScrollView>

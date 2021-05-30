@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
 import ComponentACP from '../../Components/ComponentACP'
-import ImgCDH from '../../assets/ImgACPContent/LaColmena.jpg'
+import ImgPortalapiz from '../../assets/ImgACPContent/portalapiz.jpg'
 
 const PortaLapices = ({ navigation }) => {
     return (
@@ -15,7 +15,7 @@ const PortaLapices = ({ navigation }) => {
                 Lo importante, para conseguir un efecto más bonito, es recortar los tubos de cartón a diferentes
                 alturas: el más bajo para meter tijeras y reglas, el más alto para los lápices. Finalmente, se debe pegar
                 una base de cartón rígido o plástico"
-                img={ImgCDH}
+                img={ImgPortalapiz}
                 alto={250}
             />
         </ScrollView>

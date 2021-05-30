@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         width: 330,
         height: 330,
         marginLeft:'auto',
-        marginRight:'auto'
+        marginRight:'auto',
     }
 })
 export default styles

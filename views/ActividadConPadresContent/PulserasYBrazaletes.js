@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
 import ComponentACP from '../../Components/ComponentACP'
-import ImgCDH from '../../assets/ImgACPContent/LaColmena.jpg'
+import ImgPulsera from '../../assets/ImgACPContent/pulsera.jpg'
 
 const PulserasYBrazaletes = ({ navigation }) => {
     return (
@@ -14,7 +14,7 @@ const PulserasYBrazaletes = ({ navigation }) => {
                 que se le aplique al cartón: purpurina, témperas, mosaicos, pedrería, conchas, tela … Antes de
                 comenzar con la decoración, ayuda al niño a cortar el tubo horizontalmente sin estropearlo, de modo
                 que pueda deslizarse fácilmente dentro y fuera de la muñeca"
-                img={ImgCDH}
+                img={ImgPulsera}
                 alto={230}
             />
         </ScrollView>

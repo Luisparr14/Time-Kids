@@ -47,7 +47,7 @@ const App = () => {
         headerLeft:false
       }}>
 
-        {/*Login/Register*/}
+        {/*Login/Inicio*/}
         <Stack.Screen name="Inicio" component={IndexPage} options={{ headerTitleStyle: { alignSelf: 'center' } }} />
         <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion" }} />
 

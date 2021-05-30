@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
 
 const ModuleVideos = ({ navigation, props }) => {
@@ -8,140 +9,104 @@ const ModuleVideos = ({ navigation, props }) => {
     return (
         <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Video source={{ uri: "https://www.youtube.com/?gl=CO&hl=es-419" }}   // Can be a URL or a local file.
-                    ref={(ref) => {
-                        this.player = ref
-                    }}                                      // Store reference
-                    onBuffer={this.onBuffer}                // Callback when remote video is buffering
-                    onError={this.videoError}               // Callback when video cannot be loaded
-                    style={styles.backgroundVideo} />
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ffe16c' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=zLUcGwJ2t0U')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 30, margin: 20, color: 'black' }} >Aprende las colores, vocales, números y frútas</Text>
-                    </View>
-                </TouchableOpacity>
 
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=9xMWgEZEEow')} >
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Cuentos infantiles para niños</Text>
-                    </View>
-                </TouchableOpacity>
+                <ModuleComponentWithOutImg
+                    title="Aprende las colores, vocales, números y frútas"
+                    background="#ffe16c"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=zLUcGwJ2t0U')}
+                />
 
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DcDtWGu2b3A')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Cómo Dibujar Los Números</Text>
-                    </View>
-                </TouchableOpacity>
+                <ModuleComponentWithOutImg
+                    title="Cuentos infantiles para niños"
+                    background="#06cdb4"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=9xMWgEZEEow')}
+                />
 
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=lo9T9zjOXOQ')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 40, margin: 20, color: 'black' }}>Colorear los planetas</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=GWS14nnIMXs')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 40, margin: 20, color: 'black' }} > Mezclar los colores</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ffe16c' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=IP6EvXo42ag')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 30, margin: 20, color: 'black' }} >Cómo hacer cerditos con material reciclado</Text>
-                    </View>
-                </TouchableOpacity>
+                <ModuleComponentWithOutImg
+                    title="Cómo Dibujar Los Números"
+                    background="#c8e265"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=DcDtWGu2b3A')}
+                />
 
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=BeOJKnXwah4')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 30, margin: 20, color: 'black' }} >Cómo hacer un robot con material reciclado</Text>
-                    </View>
-                </TouchableOpacity>
+                <ModuleComponentWithOutImg
+                    title="Colorear los planetas"
+                    background="#ff914d"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=lo9T9zjOXOQ')}
+                />
 
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=ISKf4g5gI7g')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 35, margin: 20, color: 'black' }} >A prepararse para dormir</Text>
-                    </View>
-                </TouchableOpacity>
+                <ModuleComponentWithOutImg
+                    title="Mezclar los colores"
+                    background="#ff914d"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=GWS14nnIMXs')}
+                />
 
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=Qcz3ep7XWWI')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Aprende las profesiones</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=ZzATGDMNKYw')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >El sistema circulatorio</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=IhO5Je1Puyw')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 35, margin: 20, color: 'black' }} >Los sentidos</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=LtDpx5HCG_Y')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 35, margin: 20, color: 'black' }} >La cadena alimenticia</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=fOYM6mZjIrc')}>
-                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-                    </View>
-                    <View style={{ flex: 1 }}>
-                        <Text style={{ fontSize: 30, margin: 20, color: 'black' }} >Animales Herbívoros, Carnívoros y Omnívoros</Text>
-                    </View>
-                </TouchableOpacity>
+                <ModuleComponentWithOutImg
+                    title="Cómo hacer cerditos con material reciclado"
+                    background="#ffe16c"
+                    textSize={34}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=IP6EvXo42ag')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="Cómo hacer un robot con material reciclado"
+                    background="#06cdb4"
+                    textSize={35}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=BeOJKnXwah4')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="A prepararse para dormir"
+                    background="#c8e265"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=ISKf4g5gI7g')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="Aprende las profesiones"
+                    background="#c8e265"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=Qcz3ep7XWWI')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="El sistema circulatorio"
+                    background="#ff914d"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=ZzATGDMNKYw')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="Los sentidos"
+                    background="#c8e265"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=IhO5Je1Puyw')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="La cadena alimenticia"
+                    background="#ff914d"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=LtDpx5HCG_Y')}
+                />
+
+                <ModuleComponentWithOutImg
+                    title="Animales Herbívoros, Carnívoros y Omnívoros"
+                    background="#ff914d"
+                    textSize={40}
+                    handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=fOYM6mZjIrc')}
+                />
+
+
 
             </View>
         </ScrollView>
 
     )
 }
-
-const styles = StyleSheet.create({
-    containerModule: {
-        height: 150,
-        width: 350,
-        marginBottom: 35,
-        borderRadius: 20,
-        flexDirection: 'row',
-        marginTop: 20,
-        marginBottom: 20
-    }
-})
 
 export default ModuleVideos

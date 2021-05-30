@@ -1,72 +1,52 @@
 import React from 'react';
 import { View, Image, Text, ScrollView, StyleSheet, Linking } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
+import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
 
 const ModuleJuegos = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ffe16c' }]} onPress={()=>Linking.openURL('https://apps.apple.com/co/app/id1435796728?mt=8')}>
-          <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-            <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Dibujar y colorear</Text>
-          </View>
-        </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#06cdb4' }]} onPress={()=>Linking.openURL()}>
-          <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-            <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Barquito chiquitoto</Text>
-          </View>
-        </TouchableOpacity>
+        <ModuleComponentWithOutImg
+          title="Dibujar y colorear"
+          background="#ffe16c"
+          textSize={40}
+          handleOnPress={() => Linking.openURL('https://apps.apple.com/co/app/id1435796728?mt=8')}
+        />
 
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#c8e265' }]} onPress={()=>Linking.openURL()}>
-          <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-            <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Toc and roll</Text>
-          </View>
-        </TouchableOpacity>
+        {/* app apple */}
+        <ModuleComponentWithOutImg
+          title="Barquito chiquitoto"
+          background="#06cdb4"
+          textSize={40}
+          handleOnPress={() => Linking.openURL()}
+        />
+        <ModuleComponentWithOutImg
+          title="Toc and roll"
+          background="#c8e265"
+          textSize={40}
+          handleOnPress={() => Linking.openURL()}
+        />
 
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL()}>
-          <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-            <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Aprende a leer y escribir</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.containerModule, { backgroundColor: '#ff914d' }]} onPress={()=>Linking.openURL()}>
-          <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-            <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://image.flaticon.com/icons/png/512/4397/4397630.png' }}></Image>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 40, margin: 20, color: 'black' }} >Fun english</Text>
-          </View>
-        </TouchableOpacity>
+          <ModuleComponentWithOutImg
+          title="Aprende a leer y escribir"
+          background="#ff914d"
+          textSize={40}
+          handleOnPress={() => Linking.openURL()}
+        />
+         <ModuleComponentWithOutImg
+          title="Fun english"
+          background="#ff914d"
+          textSize={40}
+          handleOnPress={() => Linking.openURL()}
+        />
       </View>
     </ScrollView>
 
   )
 }
-
-const styles = StyleSheet.create({
-  containerModule: {
-    height: 150,
-    width: 350,
-    marginBottom: 35,
-    borderRadius: 20,
-    flexDirection: 'row',
-    marginTop: 20,
-    marginBottom: 20
-  }
-})
 
 export default ModuleJuegos
