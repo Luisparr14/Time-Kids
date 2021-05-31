@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, Image, ImageBackground, StyleSheet, TouchableOpacity, View, Pressable } from 'react-native'
 import { ButtonBack } from './ButtonsBack-Next-Text'
 
-const VideoButton = ({ navigation, imgBackground, handleOnPress, alto, ancho, showButtonBack,videoTitle, sizeTitle}) => {
+const VideoButton = ({ navigation, imgBackground, handleOnPress, alto, ancho, showButtonBack, videoTitle, sizeTitle }) => {
 
     function ShowButton() {
         if (showButtonBack) {
@@ -16,29 +16,30 @@ const VideoButton = ({ navigation, imgBackground, handleOnPress, alto, ancho, sh
 
     const styles = StyleSheet.create({
         containerModule: {
-          height: 250,
-          marginBottom: 35,   
-          marginTop: 20,
-          marginBottom: 0,
+            height: 250,
+            width: '100%',
+            marginBottom: 35,
+            marginTop: 20,
+            marginBottom: 0,
         }
-      })
+    })
 
     return (
-            <React.Fragment>
-            <Pressable style={[styles.containerModule,{width:ancho||"95%", elevation:2, zIndex:10}]} onPress={handleOnPress}>
-                <ImageBackground 
-                    resizeMode="contain"
-                    imageStyle={{ borderRadius: 25}}
+        <React.Fragment>
+            <Pressable style={[styles.containerModule, { width: ancho || "95%", elevation: 2, zIndex: 10, backgroundColor: 'yellow' }]} onPress={handleOnPress}>
+                <ImageBackground
+                    resizeMode="cover"
+                    imageStyle={{ borderRadius: 25 }}
                     source={imgBackground}
-                    style={{width: ancho || "100%", height: alto || "100%", justifyContent: 'center', borderRadius:20}}
+                    style={{ width: ancho || "100%", height: alto || "100%", justifyContent: 'center', borderRadius: 20 }}
                 >
-                    <Text style={{textAlign:'center',width:'100%' ,textAlignVertical:'center', backgroundColor:'#00000060', color:'white', fontSize:sizeTitle||40,zIndex:-1, position:'relative', elevation:1000}}>{videoTitle}</Text>
+                    <Text style={{ textAlign: 'center', width: '100%', textAlignVertical: 'center', backgroundColor: '#00000060', color: 'white', fontSize: sizeTitle || 40, zIndex: -1, position: 'relative', elevation: 1000 }}>{videoTitle}</Text>
                 </ImageBackground>
             </Pressable>
             {ShowButton()}
-            </React.Fragment>
-            
-        
+        </React.Fragment>
+
+
 
     )
 }

@@ -5,20 +5,19 @@ import imgBackground from '../assets/BackGroundIndex.png'
 const IndexPage = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <ImageBackground source={imgBackground} style={styles.image}>
-
-                {/* <View style={styles.containerButton}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.button}>
-                        <Text style={styles.text}>REGISTRO</Text>
-                    </TouchableOpacity>
-                </View> */}
-
-                <View style={styles.containerButton}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.button}>
-                        <Text style={styles.text}>INICIAR SESIÓN</Text>
+            <ImageBackground resizeMode="stretch" source={imgBackground} style={styles.image}>
+            <View style={[styles.buttonContainer]}>
+                <View style={[styles.subContainerButton]}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+                        <Text style={[{fontSize: 29, textAlign: 'center', textAlignVertical: 'center' },styles.text]}>INICIAR SESIÓN</Text>
                     </TouchableOpacity>
                 </View>
-
+            </View>
+                {/* <View style={styles.containerButton}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.button}>
+                            <Text style={styles.text}>INICIAR SESIÓN</Text>
+                        </TouchableOpacity>
+                </View> */}
             </ImageBackground>
         </View>
     )
@@ -27,11 +26,11 @@ const IndexPage = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: "column",
         backgroundColor: '#000',
 
     },
     image: {
+        backgroundColor:'red',
         height: 'auto',
         flex: 1,
         resizeMode: "cover",
@@ -46,22 +45,32 @@ const styles = StyleSheet.create({
         height: 60,
         textAlignVertical: 'center'
     },
-
-    containerButton: {
-        position: 'relative',
-        bottom: 90,
+    buttonContainer:{
         display: 'flex',
-        alignItems: 'center',
-        alignContent: 'flex-end',
-        marginBottom: 20,
-        backgroundColor: '#8c8c8c',
-        height: 55,
-        width: '55%',
-        borderRadius: 16
+        flex: 0.3,
+        width: '100%',
+        justifyContent: 'flex-end',
+        alignItems: 'center'
+    },
+    subContainerButton:{
+        width:'100%',
+        height:'100%'
     },
     button: {
-        width: '100%',
+        justifyContent: 'center',
+        borderRadius: 30,
+        width: "90%",
+        height: 50,
+        alignSelf: 'center',
+        backgroundColor: "#8c8c8c",
+        
     }
 });
 
 export default IndexPage
+
+{/* <View style={styles.containerButton}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.button}>
+                        <Text style={styles.text}>REGISTRO</Text>
+                    </TouchableOpacity>
+                </View> */}

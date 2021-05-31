@@ -6,13 +6,12 @@ import VideoButton from '../../Components/VideoButton'
 
 const JugueteAntiestres = ({ navigation }) => {
     return (
-        <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
+        <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center', backgroundColor:'pink' }}>
             <VideoButton
                 showButtonBack={true}
                 videoTitle="Juguetes Antiestrés"
                 navigation={navigation}
-                // handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=v2pv1i9bFVY')}
-                handleOnPress={() => console.log('hola')}
+                handleOnPress={() => Linking.openURL('https://www.youtube.com/watch?v=v2pv1i9bFVY')}
                 imgBackground={Juguete}
             />
         </View>
