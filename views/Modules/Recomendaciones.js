@@ -32,6 +32,7 @@ const ModuleEjercicios = ({ navigation }) => {
         title="Terapia psicológica"
         textSize={30}
         background="#ffe16c"
+        handleOnPress={()=>navigation.navigate('Terapia')}
         />
       </View>
     </ScrollView>

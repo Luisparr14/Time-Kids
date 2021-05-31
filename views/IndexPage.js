@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
 
     },
     image: {
-        backgroundColor:'red',
         height: 'auto',
         flex: 1,
         resizeMode: "cover",

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Alert } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+
 const LoginPage = ({ navigation }) => {
 
     const [nombre, setNombre] = useState({ ['nombre']: '' })
@@ -14,9 +15,14 @@ const LoginPage = ({ navigation }) => {
     }
 
     const login = () => {
-        console.log(nombre.nombre);
-        console.log(edad.edad);
-        edad.edad == '' || nombre.nombre == '' ? Alert.alert('Llege todos los campos', "Por favor llene los campos") : edad.edad < 18 ? Alert.alert('Debe ser mayor de edad', "Debe tener más de 18 años para acceder a la app") : navigation.navigate('Modules')
+        if (edad.edad == '' || nombre.nombre == '') {
+            Alert.alert('Llene todos los campos', "Por favor llene los campos")
+        } else if (edad.edad < 18) {
+            Alert.alert('Debe ser mayor de edad', "Debe tener más de 18 años para acceder a la app")
+        } else {
+            navigation.navigate('Modules')
+            
+        }
     }
 
     return (
@@ -31,14 +37,15 @@ const LoginPage = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
 
-            <TextInput
+            <TextInput            
                 style={styles.input}
                 placeholder="Nombre"
                 name='Nombre'
                 onChangeText={(value) => setNombre({ ['nombre']: value })}
-
             />
+
             <TextInput
+                keyboardType='numeric'
                 style={styles.input}
                 placeholder="Edad"
                 name='edad'
@@ -88,8 +95,8 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center'
     },
-    subContainerButton:{
-        width:'100%',
+    subContainerButton: {
+        width: '100%',
     },
     button: {
         justifyContent: 'center',

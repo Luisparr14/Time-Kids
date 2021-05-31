@@ -37,6 +37,7 @@ import InsectoAraña from './views/ActividadConPadresContent/InsectoAraña';
 import CronogramaDeActividades from './views/RecomendacionesContent/CronogramaDeActividades';
 import TecnicasDeRelajacion from './views/RecomendacionesContent/TecnicasDeRelajacion';
 import JugueteAntiestres from './views/RecomendacionesContent/JugueteAntiestres';
+import Terapia from './views/RecomendacionesContent/Terapia';
 
 
 const Stack = createStackNavigator();
@@ -89,6 +90,7 @@ const App = () => {
         <Stack.Screen name="Cronograma" component={CronogramaDeActividades} options={{ title: "Cronograma de actividades" , headerTitleStyle: { alignSelf:'center' } }} />
         <Stack.Screen name="TecnicasRelajacion" component={TecnicasDeRelajacion} options={{ title: "Tecnicas de relajación" , headerTitleStyle: { alignSelf:'center' } }} />
         <Stack.Screen name="Juguete" component={JugueteAntiestres} options={{ title: "Juguete Antiestrés" , headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="Terapia" component={Terapia} options={{ title: "Terapia Psicologica" , headerTitleStyle: { alignSelf:'center' } }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

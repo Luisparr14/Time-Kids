@@ -16,6 +16,7 @@ const VideoButton = ({ navigation, imgBackground, handleOnPress, alto, ancho, sh
 
     const styles = StyleSheet.create({
         containerModule: {
+            borderRadius:22,
             height: 250,
             width: '100%',
             marginBottom: 35,
@@ -26,7 +27,7 @@ const VideoButton = ({ navigation, imgBackground, handleOnPress, alto, ancho, sh
 
     return (
         <React.Fragment>
-            <Pressable style={[styles.containerModule, { width: ancho || "95%", elevation: 2, zIndex: 10, backgroundColor: 'yellow' }]} onPress={handleOnPress}>
+            <Pressable style={[styles.containerModule, { width: ancho || "95%", elevation: 2, zIndex: 10}]} onPress={handleOnPress}>
                 <ImageBackground
                     resizeMode="cover"
                     imageStyle={{ borderRadius: 25 }}

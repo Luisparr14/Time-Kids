@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, ScrollView, Linking } from 'react-native'
+import { ButtonBack } from '../../Components/ButtonsBack-Next-Text';
 
 import ModuleComponentWithOutImg from '../../Components/ModuleComponentWithOutImg';
 // Iconos
@@ -34,6 +35,10 @@ const ModuleActividadesMentales = ({ navigation }) => {
           background="#ffe16c"
           textSize={38}
           handleOnPress={() => Linking.openURL('https://www.mundoprimaria.com/juegos-educativos/juegos-de-letras/juegos-de-vocabulario')}
+        />
+
+        <ButtonBack
+        navigation={navigation}
         />
 
       </View>
