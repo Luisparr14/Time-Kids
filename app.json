@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Time-Kids",
+    "name": "Time Kids",
     "slug": "Time-Kids",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,14 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.luis.timekids"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.luis.kidstime"
+      "package": "com.luis.timekids"
     },
     "web": {
       "favicon": "./assets/favicon.png"

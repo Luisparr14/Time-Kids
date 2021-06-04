@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Alert } from 'react-native'
@@ -5,6 +6,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const LoginPage = ({ navigation }) => {
+
+    
 
     const [nombre, setNombre] = useState({ ['nombre']: '' })
     const [edad, setEdad] = useState({ ['edad']: '' })
@@ -21,7 +24,12 @@ const LoginPage = ({ navigation }) => {
             Alert.alert('Debe ser mayor de edad', "Debe tener más de 18 años para acceder a la app")
         } else {
             navigation.navigate('Modules')
-            
+                navigation.reset({
+                  index: 2,
+                  routes: [
+                    {name: 'Modules'},
+                  ],
+                })
         }
     }
 

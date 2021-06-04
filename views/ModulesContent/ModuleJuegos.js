@@ -21,26 +21,26 @@ const ModuleJuegos = ({ navigation }) => {
           title="Barquito chiquitoto"
           background="#06cdb4"
           textSize={40}
-          handleOnPress={() => Linking.openURL()}
+          // handleOnPress={() => Linking.openURL()}
         />
         <ModuleComponentWithOutImg
           title="Toc and roll"
           background="#06cdb4"
           textSize={40}
-          handleOnPress={() => Linking.openURL()}
+          // handleOnPress={() => Linking.openURL()}
         />
 
           <ModuleComponentWithOutImg
           title="Aprende a leer y escribir"
           background="#06cdb4"
           textSize={40}
-          handleOnPress={() => Linking.openURL()}
+          // handleOnPress={() => Linking.openURL()}
         />
          <ModuleComponentWithOutImg
           title="Fun english"
           background="#06cdb4"
           textSize={40}
-          handleOnPress={() => Linking.openURL()}
+          // handleOnPress={() => Linking.openURL()}
         />
       </View>
     </ScrollView>

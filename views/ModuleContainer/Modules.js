@@ -11,6 +11,7 @@ import ImgNotas from '../../assets/ImgModulos/notas.png'
 import ModuleComponentWithImg from '../../Components/ModuleComponentWithImg';
 
 const Modules = ({ navigation }) => {
+
   return (
     <ScrollView>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

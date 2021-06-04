@@ -3,6 +3,7 @@ import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from 'react
 
 import imgBackground from '../assets/BackGroundIndex.png'
 const IndexPage = ({ navigation }) => {
+
     return (
         <View style={styles.container}>
             <ImageBackground resizeMode="stretch" source={imgBackground} style={styles.image}>

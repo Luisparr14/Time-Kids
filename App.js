@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 
 import { Text } from 'react-native'
@@ -38,6 +38,7 @@ import CronogramaDeActividades from './views/RecomendacionesContent/CronogramaDe
 import TecnicasDeRelajacion from './views/RecomendacionesContent/TecnicasDeRelajacion';
 import JugueteAntiestres from './views/RecomendacionesContent/JugueteAntiestres';
 import Terapia from './views/RecomendacionesContent/Terapia';
+import { useState } from 'react';
 
 
 const Stack = createStackNavigator();
@@ -49,48 +50,64 @@ const Details = () => {
 }
 
 const App = () => {
+
+  const [login,setLogin]=useState(false)
+  console.log("apps state", login);
+  
+  let initialRute='Inicio'
+
+  if(login){
+    initialRute='Modules'
+  }else{initialRute='Inicio'
+
+  }
+
   return (
-    <NavigationContainer >
-      <Stack.Navigator screenOptions={{
+    <NavigationContainer>
+      <Stack.Navigator 
+      screenOptions={{
         headerLeft:false
-      }}>
+      }}
+
+      initialRouteName={initialRute}
+      >
 
         {/*Login/Inicio*/}
-        <Stack.Screen name="Inicio" component={IndexPage} options={{ headerTitleStyle: { alignSelf: 'center' } }} />
-        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion", headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="Inicio" component={IndexPage}  options={{ headerTitleStyle: { alignSelf: 'center' } }} />
+        <Stack.Screen name="Login" component={Login} options={{ title: "Iniciar sesion", headerTitleStyle: { textAlign:'center' } }} />
 
 
         {/*Modules*/}
-        <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos", headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="Modules" component={Modules} options={{ title: "Modulos", headerTitleStyle: { textAlign:'center' } }} />
 
         {/*Views of modules*/}
-        <Stack.Screen name="AM" component={ActividadesMentales} options={{ title: "Actividades Mentales", headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Juegos" component={Juegos} options={{ title: "Juegos", headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Videos" component={Videos} options={{ title: "Videos", headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="EAAL" component={EjercicioAlAireLibre} options={{ title: "Ejercicios al aire libre" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="ACP" component={ActividadesConPadres} options={{ title: "Actividades con los padres" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Recomendaciones" component={Recomendaciones} options={{ title: "Recomendaciones" , headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="AM" component={ActividadesMentales} options={{ title: "Actividades Mentales", headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Juegos" component={Juegos} options={{ title: "Juegos", headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Videos" component={Videos} options={{ title: "Videos", headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="EAAL" component={EjercicioAlAireLibre} options={{ title: "Ejercicios al aire libre" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="ACP" component={ActividadesConPadres} options={{ title: "Actividades con los padres" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Recomendaciones" component={Recomendaciones} options={{ title: "Recomendaciones" , headerTitleStyle: { textAlign:'center' } }} />
 
         {/* ActividadesMentales-Vista */}
-        <Stack.Screen name="ViewAM" component={ModuleActividadesMentales} options={{ title: "Actividades Mentales" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="ViewJuegos" component={ModuleJuegos} options={{ title: "Juegos" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="ViewVideos" component={ModuleVideos} options={{ title: "Videos" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="ViewEjercicios" component={ModuleEjercicios} options={{ title: "Ejercicios al aire libre" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="ViewACP" component={ModuleActividadesConPadres} options={{ title: "Actividad con Padres" , headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="ViewAM" component={ModuleActividadesMentales} options={{ title: "Actividades Mentales" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="ViewJuegos" component={ModuleJuegos} options={{ title: "Juegos" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="ViewVideos" component={ModuleVideos} options={{ title: "Videos" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="ViewEjercicios" component={ModuleEjercicios} options={{ title: "Ejercicios al aire libre" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="ViewACP" component={ModuleActividadesConPadres} options={{ title: "Actividad con Padres" , headerTitleStyle: { textAlign:'center' } }} />
 
         {/* Contenido de actividad con padres */}
-        <Stack.Screen name="LaColmena" component={LaColmena} options={{ title: "La Colmena" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="CCH" component={CastilloDelCuentoDeHadas} options={{ title: "El Castillo del cuento de hadas" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="PortaLapices" component={PortaLapices} options={{ title: "Portalapices" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Pulseras" component={PulserasYBrazaletes} options={{ title: "Pulseras y brazalete" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Gallina" component={LaGallinaPortaHuevos} options={{ title: "La gallina porta huevos" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Insectos" component={InsectoAraña} options={{ title: "Insectos, arañas y ciempiés" , headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="LaColmena" component={LaColmena} options={{ title: "La Colmena" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="CCH" component={CastilloDelCuentoDeHadas} options={{ title: "El Castillo del cuento de hadas" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="PortaLapices" component={PortaLapices} options={{ title: "Portalapices" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Pulseras" component={PulserasYBrazaletes} options={{ title: "Pulseras y brazalete" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Gallina" component={LaGallinaPortaHuevos} options={{ title: "La gallina porta huevos" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Insectos" component={InsectoAraña} options={{ title: "Insectos, arañas y ciempiés" , headerTitleStyle: { textAlign:'center' } }} />
 
         {/* Contenido Recomendaciones */}
-        <Stack.Screen name="Cronograma" component={CronogramaDeActividades} options={{ title: "Cronograma de actividades" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="TecnicasRelajacion" component={TecnicasDeRelajacion} options={{ title: "Tecnicas de relajación" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Juguete" component={JugueteAntiestres} options={{ title: "Juguete Antiestrés" , headerTitleStyle: { alignSelf:'center' } }} />
-        <Stack.Screen name="Terapia" component={Terapia} options={{ title: "Terapia Psicologica" , headerTitleStyle: { alignSelf:'center' } }} />
+        <Stack.Screen name="Cronograma" component={CronogramaDeActividades} options={{ title: "Cronograma de actividades" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="TecnicasRelajacion" component={TecnicasDeRelajacion} options={{ title: "Tecnicas de relajación" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Juguete" component={JugueteAntiestres} options={{ title: "Juguete Antiestrés" , headerTitleStyle: { textAlign:'center' } }} />
+        <Stack.Screen name="Terapia" component={Terapia} options={{ title: "Terapia Psicologica" , headerTitleStyle: { textAlign:'center' } }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
