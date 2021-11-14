@@ -9,7 +9,7 @@ const styles=StyleSheet.create({
     text: {
         flex: 0.8,
         color: '#fff',
-        fontSize: 30,
+        fontSize: 22,
         width: '100%',
         height: '100%',
         textAlign: 'center',

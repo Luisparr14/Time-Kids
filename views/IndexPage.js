@@ -6,11 +6,11 @@ const IndexPage = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <ImageBackground resizeMode="stretch" source={imgBackground} style={styles.image}>
+            <ImageBackground resizeMode="cover" source={imgBackground} style={styles.image}>
             <View style={[styles.buttonContainer]}>
                 <View style={[styles.subContainerButton]}>
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
-                        <Text style={[{fontSize: 29, textAlign: 'center', textAlignVertical: 'center' },styles.text]}>INICIAR SESIÓN</Text>
+                        <Text style={styles.text}>INICIAR SESIÓN</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -26,9 +26,8 @@ const IndexPage = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#000',
-
+        height:'100%',
+        backgroundColor: '#0f0',
     },
     image: {
         height: 'auto',
@@ -46,8 +45,8 @@ const styles = StyleSheet.create({
         textAlignVertical: 'center'
     },
     buttonContainer:{
-        display: 'flex',
-        flex: 0.3,
+        position:'absolute',
+        bottom:70,
         width: '100%',
         justifyContent: 'flex-end',
         alignItems: 'center'
